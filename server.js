@@ -55,7 +55,7 @@ app.get('/currency', (request, response) => {
     })
 });
 
-app.listen(process.env.PORT);
+app.listen(process.env.PORT, '0.0.0.0')
 // app.listen(port, () => {
 //     console.log(`Server is up on the port ${port}`);
 // });
