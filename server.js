@@ -1,6 +1,7 @@
 const hbs = require('hbs');
 const bodyParser = require('body-parser');
 const express = require('express');
+const nasa_api = require('./public/nasa_api.js');
 const port = process.env.PORT || 8080;
 
 var app = express();
@@ -22,38 +23,20 @@ hbs.registerHelper('message', (text) => {
 
 app.get('/', (request, response) => {
     response.render('info.hbs', {
-        title: 'Links page',
+        title: 'Landing page',
         // year: new Date().getFullYear(),
         welcome: 'What Up?',
         pages: ['/about', '/currency']
     });
 });
 
-app.get('/about', (request, response) => {
-    response.render('about.hbs', {
-        title: 'About page',
-        // year: new Date().getFullYear(),
-        welcome: '',
-        pages: ['/links', '/currency']
+app.get('/nasa', (request, response) => {
+    response.render('nasa_form.hbs')
+})
 
-    });
-});
-
-
-
-
-app.get('/currency', (request, response) => {
-    currency.getResults(250, 'CAD', 'USD').then((result) => {
-        response.render('currency.hbs', {
-            title: 'Currency',
-            welcome: '',
-            result: result,
-            pages: ['/links', '/about']
-        })    
-    }).catch((error) => {
-        response.send(error);
-    })
-});
+app.post('/nasa', urlencode, async(request, response) => {
+    response.render('nasa_form.hbs')
+})
 
 // app.listen(process.env.PORT, '0.0.0.0')
 app.listen(port, () => {

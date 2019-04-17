@@ -1,28 +1,7 @@
-{{!-- <!DOCTYPE html>
-<html>
-
-{{> head}}
-
-<body>
-    <h1 style="text-align:center">Links Page</h1>
-    <h1 style="text-align:center;">Click on one of the links above !</h1>
-</body>
-
-{{> links}}
-
-{{> footer}}
-
-</html> --}}
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-</head>
+<html>
+{{> header}}
 
 <style>
     body {
@@ -34,11 +13,9 @@
 
 <form method="POST" action="/weather">
     <div class="form-group">
-        <label for="city_input">Latitude:</label>
-        <input type="text" class="form-control" name='country_input' id="country_input">
+        <label for="planet_input">Planet:</label>
+        <input type="text" class="form-control" name='planet_input' id="country_input">
 
-        <label for="city_input">Longitude:</label>
-        <input type="text" class="form-control" name='country_input' id="country_input">
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
     <p class="output" id="output"></p>

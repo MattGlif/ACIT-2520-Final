@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    {{> header}}
+    <style>
+        body {
+            background-color: darkgray
+        }
+    </style>
+    <body>
+
+        <form method="POST" action="/nasa">
+        <div class="form">
+            <label for="picture_input">Picture:</label>
+            <input type="text" class="form-control" name='picture_input' id="picture_input">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </body>
+</html>
