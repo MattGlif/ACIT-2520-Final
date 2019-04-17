@@ -55,6 +55,7 @@ app.get('/currency', (request, response) => {
     })
 });
 
-app.listen(port, () => {
-    console.log(`Server is up on the port ${port}`);
-});
+app.listen(process.env.PORT);
+// app.listen(port, () => {
+//     console.log(`Server is up on the port ${port}`);
+// });
