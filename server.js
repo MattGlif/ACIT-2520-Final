@@ -1,7 +1,7 @@
 const hbs = require('hbs');
 const bodyParser = require('body-parser');
 const express = require('express');
-const port = process.env.port || 8080;
+const port = process.env.PORT || 8080;
 
 var app = express();
 var urlencode = bodyParser.urlencoded({extended: false});
@@ -55,7 +55,7 @@ app.get('/currency', (request, response) => {
     })
 });
 
-app.listen(process.env.PORT, '0.0.0.0')
-// app.listen(port, () => {
-//     console.log(`Server is up on the port ${port}`);
-// });
+// app.listen(process.env.PORT, '0.0.0.0')
+app.listen(port, () => {
+    console.log(`Server is up on the port ${port}`);
+});
