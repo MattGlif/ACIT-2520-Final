@@ -10,9 +10,17 @@ app.use(bodyParser.json());
 app.set('view engine', 'hbs');
 app.use(express.static(__dirname + '/public'));
 
-hbs.registerPartials(__dirname + '/views');
+hbs.registerPartials(__dirname + '/views/partials');
 
-app.get('/links', (request, response) => {
+hbs.registerHelper('getCurrentYear', () => {
+    return new Date().getFullYear();
+})
+
+hbs.registerHelper('message', (text) => {
+    return text.toUpperCase();
+})
+
+app.get('/', (request, response) => {
     response.render('info.hbs', {
         title: 'Links page',
         // year: new Date().getFullYear(),
