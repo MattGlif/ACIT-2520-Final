@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+{{!-- <!DOCTYPE html>
 <html>
 
-{{!-- {{> head}} --}}
+{{> head}}
 
 <body>
     <h1 style="text-align:center">Links Page</h1>
@@ -12,4 +12,25 @@
 
 {{> footer}}
 
-</html>
+</html> --}}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+    <h1>Node Final</h1>
+
+<form method="POST" action="/weather">
+    <div class="form-group">
+        <label for="city_input">Country:</label>
+        <input type="text" class="form-control" name='country_input' id="country_input">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <p class="output" id="output"></p>
+</form>
