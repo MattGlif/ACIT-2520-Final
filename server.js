@@ -39,6 +39,9 @@ app.get('/about', (request, response) => {
     });
 });
 
+
+
+
 app.get('/currency', (request, response) => {
     currency.getResults(250, 'CAD', 'USD').then((result) => {
         response.render('currency.hbs', {
