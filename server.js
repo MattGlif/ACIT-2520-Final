@@ -56,5 +56,5 @@ app.get('/currency', (request, response) => {
 });
 
 app.listen(port, () => {
-    console.log('Server is up on the port 8080');
+    console.log(`Server is up on the port ${port}`);
 });
